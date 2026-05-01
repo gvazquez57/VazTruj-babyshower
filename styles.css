@@ -1,12 +1,12 @@
 :root {
-  --navy: #0b2545;
+  --navy: #0a1f3a;
   --blue: #1e6fdb;
-  --sky: #4da3ff;
-  --ice: #eaf4ff;
+  --sky: #0052cc;
+  --ice: #e8f0ff;
   --white: #ffffff;
-  --ink: #0f172a;
-  --soft: #475569;
-  --shadow: 0 18px 55px rgba(15, 23, 42, 0.18);
+  --ink: #0a1f3a;
+  --soft: #1a3a52;
+  --shadow: 0 18px 55px rgba(15, 23, 42, 0.25);
 }
 
 * { box-sizing: border-box; }
@@ -16,10 +16,7 @@ body {
   min-height: 100vh;
   font-family: "Nunito", system-ui, sans-serif;
   color: var(--ink);
-  background:
-    radial-gradient(circle at top left, rgba(248, 215, 218, 0.8), transparent 32rem),
-    radial-gradient(circle at bottom right, rgba(152, 170, 138, 0.45), transparent 28rem),
-    var(--cream);
+  background: #1a2332;
 }
 
 .page {
@@ -29,8 +26,8 @@ body {
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.82);
-  border: 1px solid rgba(255, 255, 255, 0.75);
+  background: #f0f5fb;
+  border: 2px solid var(--navy);
   border-radius: 30px;
   box-shadow: var(--shadow);
 }
@@ -47,7 +44,7 @@ body {
   letter-spacing: 0.16em;
   font-size: 0.78rem;
   font-weight: 800;
-  color: var(--sage);
+  color: var(--blue);
 }
 
 h1, h2 {
@@ -58,7 +55,7 @@ h1, h2 {
 h1 {
   margin: 0;
   font-size: clamp(3.8rem, 13vw, 8.5rem);
-  color: var(--ink);
+  color: var(--navy);
 }
 
 h2 {
@@ -70,7 +67,7 @@ h2 {
   margin: 12px auto 22px;
   font-size: 1.22rem;
   font-weight: 800;
-  color: var(--soft);
+  color: var(--blue);
 }
 
 .intro {
@@ -110,10 +107,11 @@ h2 {
   margin-top: 8px;
   padding: 12px 16px;
   border-radius: 999px;
-  background: var(--ink);
+  background: var(--navy);
   color: white;
   text-decoration: none;
   font-weight: 800;
+  border: 2px solid var(--blue);
 }
 
 .button:hover {
@@ -124,9 +122,15 @@ h2 {
   margin-top: 18px;
   padding: 24px;
   display: grid;
-  grid-template-columns: 1fr 1.1fr;
+  grid-template-columns: minmax(100px, 0.6fr) 1fr 1.1fr;
   gap: 20px;
   align-items: center;
+}
+
+.sidebar-image {
+  width: 100%;
+  border-radius: 24px;
+  background: var(--blush);
 }
 
 .photo-card p {
@@ -147,11 +151,73 @@ h2 {
 }
 
 @media (max-width: 720px) {
-  .grid, .photo-card {
+  .grid {
     grid-template-columns: 1fr;
+  }
+
+  .photo-card {
+    grid-template-columns: minmax(80px, 0.5fr) 1fr;
+  }
+
+  .photo-pair {
+    grid-column: 2;
   }
 
   .hero {
     padding: 28px 18px;
+  }
+}
+
+@media (max-width: 700px) {
+  .photo-card {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 18px;
+    align-items: start;
+    padding: 24px;
+  }
+
+  .photo-card .sidebar-image {
+    width: 100%;
+    height: 215px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  .photo-card > div:not(.photo-pair) {
+    grid-column: 2;
+  }
+
+  .photo-card .eyebrow {
+    font-size: 0.8rem;
+    letter-spacing: 0.18em;
+    margin-bottom: 8px;
+  }
+
+  .photo-card h2 {
+    font-size: clamp(2rem, 9vw, 3.1rem);
+    line-height: 0.9;
+    margin: 0 0 14px;
+  }
+
+  .photo-card p {
+    font-size: 1rem;
+    line-height: 1.35;
+  }
+
+  .photo-pair {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 8px;
+  }
+
+  .photo-pair img {
+    width: 44%;
+    max-width: 140px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 20px;
   }
 }
