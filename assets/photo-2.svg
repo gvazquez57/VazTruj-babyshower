@@ -1,0 +1,6 @@
+<svg width="500" height="620" viewBox="0 0 500 620" xmlns="http://www.w3.org/2000/svg">
+  <rect width="500" height="620" rx="36" fill="#F8D7DA"/>
+  <circle cx="250" cy="230" r="115" fill="#FFF7EC"/>
+  <path d="M165 420c54-74 116-74 170 0" stroke="#98AA8A" stroke-width="30" fill="none" stroke-linecap="round"/>
+  <text x="250" y="530" text-anchor="middle" font-family="Georgia, serif" font-size="40" fill="#3F352F">Photo Spot</text>
+</svg>

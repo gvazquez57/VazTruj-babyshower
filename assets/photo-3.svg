@@ -1,0 +1,5 @@
+<svg width="500" height="620" viewBox="0 0 500 620" xmlns="http://www.w3.org/2000/svg">
+  <rect width="500" height="620" rx="36" fill="#98AA8A" opacity=".75"/>
+  <path d="M122 222c42-82 214-82 256 0 30 58-8 157-128 221-120-64-158-163-128-221z" fill="#FFF7EC"/>
+  <text x="250" y="530" text-anchor="middle" font-family="Georgia, serif" font-size="40" fill="#3F352F">Cute Picture</text>
+</svg>
